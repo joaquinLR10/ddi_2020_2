@@ -7,7 +7,8 @@ public class Codig_problem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int i,j,cont=0;
+       
+ int i,j,cont=0;
         int[] nums={8,1,2,2,3};
        int[] nums2= new int[5];
 
@@ -21,10 +22,12 @@ public class Codig_problem : MonoBehaviour
            nums2[i]=cont;
            Debug.Log("nums:"+ nums2[i]);
            
+           
        }
-
      
     }
+    
+    
 }
 
   
