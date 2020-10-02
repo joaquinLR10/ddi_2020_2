@@ -11,7 +11,7 @@ public class Codig_problem : MonoBehaviour
  int i,j,cont=0;
         int[] nums={8,1,2,2,3};
        int[] nums2= new int[5];
-
+        
        for(i=0;i<5;i++){
            cont=0;
            for(j=0;j<5;j++){
@@ -20,12 +20,13 @@ public class Codig_problem : MonoBehaviour
                 }
            }
            nums2[i]=cont;
-           Debug.Log("nums:"+ nums2[i]);
+           Debug.Log("output:"+ nums2[i]);
            
            
        }
      
     }
+    
     
     
 }
