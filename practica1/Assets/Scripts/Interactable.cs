@@ -1,30 +1,41 @@
-﻿using System.Collections;
+﻿
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-   public AudioClip sonido = null;
-   public float volumen = 1.0f;//indica el volumen del sonido 
-   protected Transform posicion = null;
-    void Start()
+    bool isInsideZone = false;
+
+    public virtual void Interact()
     {
-        posicion= transform;
+        Debug.Log("Ejecutando interacción...");
     }
 
-   
+    void Update()
+    {
+        if(isInsideZone && Input.GetKeyDown(KeyCode.I))
+        {
+            Interact();
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        
-        if(!other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
         {
             return;
         }
-       if(sonido)
-       AudioSource.PlayClipAtPoint(sonido,posicion.position,volumen);
+        isInsideZone = true;
+    }
 
-       
-        
+    void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+        isInsideZone = false;
     }
 }
