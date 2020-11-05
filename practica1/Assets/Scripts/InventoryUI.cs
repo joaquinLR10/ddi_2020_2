@@ -5,16 +5,19 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     public GameObject inventoryUIPanel;
+    public GameObject text;
     private Inventory inventory;
 
     void Start()
     {
-        inventory = FindObjectOfType<Inventory>();
+       // inventory = FindObjectOfType<Inventory>();
+       inventory = Inventory.InventoryInstance;
         if (inventory == null)
         {
             return;
         }
         inventoryUIPanel.SetActive(false);
+        text.SetActive(false);
         inventory.onChange += UpdateUI;
     }
 
@@ -23,6 +26,7 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             inventoryUIPanel.SetActive(!inventoryUIPanel.activeSelf);
+             text.SetActive(!text.activeSelf);
             UpdateUI();
         }
     }
@@ -43,6 +47,5 @@ public class InventoryUI : MonoBehaviour
         }
     }
 }
-//public GameObject text;
- //text.SetActive(false);
- //text.SetActive(!text.activeSelf);
+
+ 

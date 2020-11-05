@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0315ff9f96cb61640bed47af52616017, type: 3}
-  m_Name: posion
+  m_Script: {fileID: 11500000, guid: ead3ca2ec0c52dd4d993911fb0d18bf0, type: 3}
+  m_Name: Posion
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 2d7d9ae02b7159843ac7d5ead0f8b89a, type: 3}
+  icon: {fileID: 21300000, guid: ace8a02646afeda4880fc3cb14cad705, type: 3}
   itemType: 2

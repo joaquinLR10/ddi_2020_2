@@ -13,11 +13,13 @@ public enum ItemType
 [CreateAssetMenu(fileName = "Nuevo Item", menuName = "Inventario/Generic Item")]
 public class Item : ScriptableObject
 {
+  
     public Sprite icon = null;
     public ItemType itemType = ItemType.Food;
 
     public virtual void Use()
     {
+    
         Debug.Log("Usando item: " + name);
     }
 }

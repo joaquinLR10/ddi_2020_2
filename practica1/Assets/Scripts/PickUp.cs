@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PickUp : Interactable
 {
+    
     private Inventory inventory;
     public Item item;
+    
     void Start()
     {
+        
         inventory = FindObjectOfType<Inventory>();
         if (inventory == null)
         {
@@ -17,15 +20,19 @@ public class PickUp : Interactable
 
     public override void Interact()
     {
-        Debug.Log("Levantando item");
-        if (item.itemType != ItemType.Money)
+        if(item.itemType==ItemType.Food)
         {
-            inventory.Add(item);
+              
+      
+              Debug.Log("cogiendo jamon....");
         }
         else
         {
-            Debug.Log("Sumando monedas");
+        Debug.Log("cogiendo posion......");
+         
         }
+      
+        inventory.Add(item);
         Destroy(gameObject);
     }
 }
